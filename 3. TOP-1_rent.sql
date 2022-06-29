@@ -1,4 +1,4 @@
---Вывод таблицы ТОП1 по одному из 3-х параметров. 
+--Output a table with TOP-1 sale_date for one of the tree parameters. 
 
 select *
 from (select

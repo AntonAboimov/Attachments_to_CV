@@ -1,4 +1,4 @@
---Использую CTE, для облегчения выражения с окнонной функцией и расчетом процента в основном запросе 
+--Use CTE to make easier calculation in main query
 
 with tot_seats as
 (

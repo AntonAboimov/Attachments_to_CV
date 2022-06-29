@@ -1,4 +1,4 @@
---—оздаю представление с набором встречающихс€ в базе пар: аэропорт вылета - аэопорт прибыти€
+--I used view to make a table with exist flight directions 
 
 create view flight_direction as
 select
@@ -15,8 +15,8 @@ order by dep_city, arr
 select *
 from flight_direction fd 
 
---»спользу€ представление с направлени€ми полетов, вычисл€ю рассто€ние перелета
--- и сравниваю с дальностью полета самолетов на данном маршруте 
+--Than I calculated distance between airports from previous view and compared it with aircraft's range flying on this route
+
 select
   	distinct dep_city
   	, a.airport_name as starts
