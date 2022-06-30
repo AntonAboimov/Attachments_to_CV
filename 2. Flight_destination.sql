@@ -1,5 +1,3 @@
---I used view to make a table with exist flight directions 
-
 create view flight_direction as
 select
   	 a3.city as dep_city
@@ -12,10 +10,10 @@ join airports a4 on f.arrival_airport = a4.airport_code
 group by dep_city, a3.airport_code, arr, a4.airport_code
 order by dep_city, arr
 
+
 select *
 from flight_direction fd 
 
---Than I calculated distance between airports from previous view and compared it with aircraft's range flying on this route
 
 select
   	distinct dep_city

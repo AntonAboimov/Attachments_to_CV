@@ -1,5 +1,3 @@
---Use CTE to make easier calculation in main query
-
 with tot_seats as
 (
   	select aircraft_code

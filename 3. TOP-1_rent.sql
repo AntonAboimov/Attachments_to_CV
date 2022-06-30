@@ -1,5 +1,3 @@
---Output a table with TOP-1 sale_date for one of the tree parameters. 
-
 select *
 from (select
        	store_id
