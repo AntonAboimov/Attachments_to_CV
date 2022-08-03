@@ -62,3 +62,5 @@ where  last_card_date > (select report_date from report_date)
 	or last_address_date > (select report_date from report_date)
 	or last_ip_date > (select report_date from report_date)
 order by qty_same_card desc NULLS last, card_seq, qty_same_address desc NULLS last, address_seq, qty_same_ip desc NULLS last, ip_seq
+
+
