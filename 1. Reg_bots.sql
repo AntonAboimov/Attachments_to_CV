@@ -20,13 +20,13 @@ from (
 		 , count(*) over (partition by seq_1fst_date) as bot_count
 	from (
 		select *
-			 , max (seq_start_date) over (partition by country order by user_id
-										  rows between unbounded preceding and current row) as seq_1fst_date   
+			, max (seq_start_date) over (partition by country order by user_id
+							rows between unbounded preceding and current row) as seq_1fst_date   
 		from (
 			select *
 				 , case
-						when(registration_date - prev_date >= '00:03:00.000') or (prev_date is null) then registration_date 
-						else null
+					when(registration_date - prev_date >= '00:03:00.000') or (prev_date is null) then registration_date 
+					else null
 				   end as seq_start_date
 			from (
 				select * 
